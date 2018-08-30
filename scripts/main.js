@@ -2,9 +2,11 @@ var picturesFirstRow = [];
 var picturesSecondRow = [];
 var pictures = [];
 var wrapper = document.querySelector(".wrapper");
+var divPicturesSecond = document.querySelector(".secondRow");
 var divCounter = document.querySelector(".counter");
 var divContainer;
 var overlay = document.querySelector(".giftOverLayer");
+
 var gift = document.querySelector(".headerImg");
 
 pictures = [
@@ -71,7 +73,6 @@ function displayNextImage() {
 function checkImage() {
   var newImage = pictures[randomNr];
   for (var i = 0; i < divContainer.length; i++) {
-    counter++;
     var currentPic = divContainer[i].getAttribute("src");
     currentPic = currentPic.substring(7);
     if (currentPic === newImage) {
@@ -93,26 +94,24 @@ function changeToPresent() {
   overlay.style.visibility = "visible";
 }
 
-document.addEventListener("keydown", function(event) {
-  if (event.keyCode === 27) {
-    hidePresent();
-  }
-});
+document.addEventListener("keydown", setOverlayHidden);
 
-overlay.addEventListener("click", function() {
-  overlay.style.visibility = "hidden";
-});
+overlay.addEventListener("click", setOverlayHidden);
 
 function chageToPrestentImage() {
+  // gift.setAttribute("class", "headerImg");
+  // var imgHeader = document.querySelector("#present");
+  // imgHeader.src = "images/gift-01.png";
   document.querySelector(".pictureTxt").style.visibility = "hidden";
-}
-
-function hidePresent() {
-  overlay.style.visibility = "hidden";
+  // gift = document.querySelector(".headerImg");
 }
 
 gift.addEventListener("mousedown", changeToPresent);
 
+function setOverlayHidden(params) {
+  overlay.style.visibility = "hidden";
+}
+
+setTimer();
 refreshTimer();
 startTimer();
-setTimer();
