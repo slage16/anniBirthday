@@ -81,6 +81,10 @@ header .headerContainer p.greatings {
   overflow-wrap: break-word;
 }
 
+.giftOverLayer img {
+  pointer-events: none;
+}
+
 .wrapper {
   display: flex;
   flex-wrap: wrap;
