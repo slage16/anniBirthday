@@ -99,6 +99,7 @@ header .headerContainer p.greatings {
 .wrapper .container img {
   max-width: 100%;
   align-self: stretch;
+  pointer-events: none;
 }
 
 footer {
