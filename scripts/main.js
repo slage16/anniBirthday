@@ -2,11 +2,9 @@ var picturesFirstRow = [];
 var picturesSecondRow = [];
 var pictures = [];
 var wrapper = document.querySelector(".wrapper");
-var divPicturesSecond = document.querySelector(".secondRow");
 var divCounter = document.querySelector(".counter");
 var divContainer;
 var overlay = document.querySelector(".giftOverLayer");
-
 var gift = document.querySelector(".headerImg");
 
 pictures = [
@@ -55,8 +53,6 @@ divContainer = document.querySelectorAll(".picture");
 
 var dateOfAnniversary = new Date(2005, 1, 7, 12, 0, 0);
 
-setTimer();
-
 function setTimer() {
   divCounter.textContent = moment("2005-02-07 12:00:00").preciseDiff(
     new Date()
@@ -68,13 +64,11 @@ var randomPic = 0;
 function displayNextImage() {
   randomNr = Math.floor(Math.random() * (pictures.length - 1) + 1);
   randomPic = Math.floor(Math.random() * 8);
-
   checkImage();
   divContainer[randomPic].setAttribute("src", "images/" + pictures[randomNr]);
 }
 
 function checkImage() {
-  var counter = 0;
   var newImage = pictures[randomNr];
   for (var i = 0; i < divContainer.length; i++) {
     counter++;
@@ -101,7 +95,7 @@ function changeToPresent() {
 
 document.addEventListener("keydown", function(event) {
   if (event.keyCode === 27) {
-    overlay.style.visibility = "hidden";
+    hidePresent();
   }
 });
 
@@ -110,16 +104,15 @@ overlay.addEventListener("click", function() {
 });
 
 function chageToPrestentImage() {
-  gift.setAttribute("class", "headerImg");
-  var imgHeader = document.querySelector("#present");
-  imgHeader.src = "images/gift-01.png";
-  document
-    .querySelector(".pictureTxt")
-    .setAttribute("style", "visibility: hidden;");
-  gift = document.querySelector(".headerImg");
+  document.querySelector(".pictureTxt").style.visibility = "hidden";
+}
+
+function hidePresent() {
+  overlay.style.visibility = "hidden";
 }
 
 gift.addEventListener("mousedown", changeToPresent);
 
 refreshTimer();
 startTimer();
+setTimer();
