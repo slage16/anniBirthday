@@ -1,0 +1,97 @@
+body {
+  padding: 0;
+  margin: 0 auto;
+  background: #ddd url(../images/bg.jpg) repeat top left;
+  font-family: "Playfair Display", serif;
+  font-size: 2.2em;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 0;
+  padding: 0 1%;
+}
+
+header p {
+  font-style: italic;
+  text-align: center;
+}
+
+header .headerContainer p.greatings {
+  /* background-color: #666666;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: rgba(255, 255, 255, 1) 0px 3px 3px; */
+  color: rgba(16, 13, 13, 0.75);
+  text-shadow: 1px 1px 1.25px rgb(168, 162, 162),
+    -1px -1px 1.25px rgb(168, 162, 162), -1px 1px 1.25px rgb(168, 162, 162),
+    1px -1px 1.25px rgb(168, 162, 162), 1px 0 1.25px rgb(168, 162, 162),
+    0 1px 1.25px rgb(168, 162, 162), -1.5px -1.5px 1.25px rgb(51, 51, 56),
+    1.5px 1.5px 1.25px rgb(51, 51, 56), -1.5px 1.5px 1.25px rgb(51, 51, 56),
+    1.5px -1.5px 1.25px rgb(51, 51, 56), 1px 1.5px 1.25px rgb(51, 51, 56),
+    1.5px 1px 1.25px rgb(51, 51, 56);
+}
+
+.headerContainer p.headerImg {
+  width: 90px;
+  height: auto;
+}
+
+.headerContainer img {
+  max-width: 100%;
+  height: auto;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+.headerContainer img:hover {
+  transform: scale(1.3);
+}
+
+.giftOverLayer {
+  position: fixed;
+  width: 50%;
+  left: 25%;
+  background: #ddd url(../images/bg.jpg) repeat top left;
+  font-size: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0px 0px 158px 109px rgba(33, 33, 36, 1);
+  visibility: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.wrapper .container {
+  flex-basis: 25%;
+  height: 25%;
+  /* height: 200px; */
+  overflow: hidden;
+}
+
+.wrapper .container img {
+  max-width: 100%;
+}
+
+footer {
+  font-style: normal;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+footer p.counter {
+  padding: 0 10px;
+  margin: 0;
+  background: #ddd url(../images/bg.jpg) repeat top left;
+  border-top-left-radius: 5px;
+  font-size: 22px;
+}
