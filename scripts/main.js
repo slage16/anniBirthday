@@ -1,12 +1,9 @@
-var picturesFirstRow = [];
-var picturesSecondRow = [];
 var pictures = [];
 var wrapper = document.querySelector(".wrapper");
 var divPicturesSecond = document.querySelector(".secondRow");
 var divCounter = document.querySelector(".counter");
 var divContainer;
 var overlay = document.querySelector(".giftOverLayer");
-
 var gift = document.querySelector(".headerImg");
 
 pictures = [
@@ -99,11 +96,7 @@ document.addEventListener("keydown", setOverlayHidden);
 overlay.addEventListener("click", setOverlayHidden);
 
 function chageToPrestentImage() {
-  // gift.setAttribute("class", "headerImg");
-  // var imgHeader = document.querySelector("#present");
-  // imgHeader.src = "images/gift-01.png";
   document.querySelector(".pictureTxt").style.visibility = "hidden";
-  // gift = document.querySelector(".headerImg");
 }
 
 gift.addEventListener("mousedown", changeToPresent);
