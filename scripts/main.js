@@ -42,7 +42,7 @@ for (var i = 0; i <= 7; i++) {
   var image = document.createElement("img");
   image.setAttribute(
     "src",
-    "images/" + pictures[Math.floor(Math.random() * 8) + 1]
+    "images/" + pictures[Math.floor(Math.random() * 26) + 1]
   );
   image.setAttribute("class", "picture");
   countainer.appendChild(image);
