@@ -60,25 +60,44 @@ function setTimer() {
 // change images //
 var randomNr = 0;
 var randomPic = 0;
+//function displayNextImage() {
+//  randomNr = Math.floor(Math.random() * (pictures.length - 1) + 1);
+//  randomPic = Math.floor(Math.random() * 8);
+//  checkImage();
+//  divContainer[randomPic].setAttribute("src", "images/" + pictures[randomNr]);
+//}
 function displayNextImage() {
-  randomNr = Math.floor(Math.random() * (pictures.length - 1) + 1);
-  randomPic = Math.floor(Math.random() * 8);
-  checkImage();
-  divContainer[randomPic].setAttribute("src", "images/" + pictures[randomNr]);
-}
+  const displayedImageSources = Array.from(divContainer).map(img => img.getAttribute("src"));
+  let newImageSrc;
+  let attempts = 0; // Schutz vor Endlosschleife, falls alle Bilder schon angezeigt werden
+                   // (unwahrscheinlich bei deiner Konfiguration, aber gute Praxis)
 
-function checkImage() {
-  var newImage = pictures[randomNr];
-  for (var i = 0; i < divContainer.length; i++) {
-    var currentPic = divContainer[i].getAttribute("src");
-    currentPic = currentPic.substring(7);
-    if (currentPic === newImage) {
-      randomNr = Math.floor(Math.random() * pictures.length - 1) + 1;
-      newImage = pictures[randomNr];
-      i = 0;
-    }
-  }
+  do {
+    const randomIdx = Math.floor(Math.random() * pictures.length); // Wählt aus ALLEN Bildern
+    newImageSrc = "images/" + pictures[randomIdx];
+    attempts++;
+  } while (displayedImageSources.includes(newImageSrc) && attempts < pictures.length * 2);
+  // Wenn nach einigen Versuchen kein neues Bild gefunden wurde,
+  // oder wenn das Bild zufällig nicht schon angezeigt wird:
+  
+  const randomPicSlot = Math.floor(Math.random() * divContainer.length);
+  divContainer[randomPicSlot].setAttribute("src", newImageSrc);
 }
+// In diesem Fall wird checkImage() nicht mehr separat benötigt,
+// die Logik ist in displayNextImage integriert.
+// Du müsstest dann startTimer() anpassen, um diese neue displayNextImage aufzurufen.
+//function checkImage() {
+//  var newImage = pictures[randomNr];
+//  for (var i = 0; i < divContainer.length; i++) {
+//    var currentPic = divContainer[i].getAttribute("src");
+//    currentPic = currentPic.substring(7);
+//    if (currentPic === newImage) {
+//      randomNr = Math.floor(Math.random() * pictures.length - 1) + 1;
+//      newImage = pictures[randomNr];
+//      i = 0;
+//    }
+//  }
+//}
 
 function startTimer() {
   setInterval(displayNextImage, 1000);
