@@ -71,7 +71,7 @@ for (let i = 0; i < 8; i++) { // Angenommen, du willst 8 Bilder
 }
 divContainer = document.querySelectorAll(".picture"); // Danach neu zuweisen
 
-divContainer = document.querySelectorAll(".picture");
+//divContainer = document.querySelectorAll(".picture");
 
 var dateOfAnniversary = new Date(2005, 1, 7, 12, 0, 0);
 
