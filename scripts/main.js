@@ -36,7 +36,7 @@ pictures = [
   "akse0083.jpg"
 ];
 
-for (var i = 0; i <= 7; i++) {
+/* for (var i = 0; i <= 7; i++) {
   var countainer = document.createElement("div");
   countainer.setAttribute("class", "container");
   var image = document.createElement("img");
@@ -48,6 +48,29 @@ for (var i = 0; i <= 7; i++) {
   countainer.appendChild(image);
   wrapper.appendChild(countainer);
 }
+*/
+// Beim initialen Laden
+const initialPictures = [...pictures]; // Kopie erstellen
+for (let i = 0; i < 8; i++) { // Angenommen, du willst 8 Bilder
+  const container = document.createElement("div");
+  container.setAttribute("class", "container");
+  const image = document.createElement("img");
+  
+  if (initialPictures.length > 0) {
+    const randomIndex = Math.floor(Math.random() * initialPictures.length);
+    const selectedPic = initialPictures.splice(randomIndex, 1)[0]; // Bild auswählen und entfernen
+    image.setAttribute("src", "images/" + selectedPic);
+  } else {
+    // Fallback, falls weniger als 8 Bilder im Array sind
+    // oder alle schon verwendet wurden (sollte hier nicht passieren)
+    image.setAttribute("src", "images/default.jpg"); // Beispiel
+  }
+  image.setAttribute("class", "picture");
+  container.appendChild(image);
+  wrapper.appendChild(container);
+}
+divContainer = document.querySelectorAll(".picture"); // Danach neu zuweisen
+
 divContainer = document.querySelectorAll(".picture");
 
 var dateOfAnniversary = new Date(2005, 1, 7, 12, 0, 0);
