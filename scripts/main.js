@@ -85,7 +85,7 @@ for (let i = 0; i < 8; i++) { // Angenommen, du willst 8 Bilder
   } else {
     // Fallback, falls weniger als 8 Bilder im Array sind
     // oder alle schon verwendet wurden (sollte hier nicht passieren)
-    image.setAttribute("src", "images/default.jpg"); // Beispiel
+    image.setAttribute("src", "images/MAMA (1).jpg"); // Beispiel
   }
   image.setAttribute("class", "picture");
   container.appendChild(image);
