@@ -7,8 +7,33 @@ var overlay = document.querySelector(".giftOverLayer");
 var gift = document.querySelector(".headerImg");
 
 pictures = [
-  "akse2705.jpg",
-  "akse2700.jpg",
+  "MAMA (1).jpg",
+  "MAMA (1).jpeg",
+  "MAMA (2).jpg",
+  "MAMA (2).jpeg",
+  "MAMA (3).jpg",
+  "MAMA (3).jpeg",
+  "MAMA (4).jpeg",
+  "MAMA (5).jpeg",
+  "MAMA (6).jpeg",
+  "MAMA (7).jpeg",
+  "MAMA (8).jpeg",
+  "MAMA (9).jpeg",
+  "MAMA (10).jpeg",
+  "MAMA (11).jpeg",
+  "MAMA (12).jpeg",
+  "MAMA (13).jpeg",
+  "MAMA (14).jpeg",
+  "MAMA (15).jpeg",
+  "MAMA (16).jpeg",
+  "MAMA (17).jpeg",
+  "MAMA (18).jpeg",
+  "MAMA (19).jpeg",
+  "MAMA (20).jpeg",
+  "MAMA (21).jpeg",
+  "MAMA (22).jpeg",
+  "MAMA (23).jpeg",
+ /* "akse2700.jpg",
   "akse2635.jpg",
   "akse2624.jpg",
   "akse2198.jpg",
@@ -34,6 +59,7 @@ pictures = [
   "akse0288sw.jpg",
   "akse0202.jpg",
   "akse0083.jpg"
+*/
 ];
 
 /* for (var i = 0; i <= 7; i++) {
