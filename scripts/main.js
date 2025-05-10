@@ -28,8 +28,8 @@ pictures = [
   "MAMA (19).jpg",
   "MAMA (20).jpg",
   "MAMA (21).jpg",
-  "MAMA (22).jpg",
-  "MAMA (23).jpg",
+  "MAMA (22).jpg"
+  //"MAMA (23).jpg"
  /* "akse2700.jpg",
   "akse2635.jpg",
   "akse2624.jpg",
@@ -55,8 +55,7 @@ pictures = [
   "akse0303sw.jpg",
   "akse0288sw.jpg",
   "akse0202.jpg",
-  "akse0083.jpg"
-*/
+  "akse0083.jpg"*/
 ];
 
 /* for (var i = 0; i <= 7; i++) {
