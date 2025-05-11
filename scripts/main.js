@@ -72,7 +72,14 @@ pictures = [
 }
 */
 // Beim initialen Laden
-const initialPictures = [...pictures]; // Kopie erstellen
+const initialPictures = ["MAMA (1).jpg",
+  "MAMA (2).jpg",
+  "MAMA (3).jpg",
+  "MAMA (4).jpg",
+  "MAMA (5).jpg",
+  "MAMA (6).jpg",
+  "MAMA (7).jpg",
+  "MAMA (8).jpg"]; // Kopie erstellen
 for (let i = 0; i < 8; i++) { // Angenommen, du willst 8 Bilder
   const container = document.createElement("div");
   container.setAttribute("class", "container");
