@@ -198,3 +198,19 @@ dialog::backdrop {
   opacity: 1;
   will-change: opacity;
 }
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.photo-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  opacity: 1;
+  transition: opacity 420ms ease;
+  will-change: opacity;
+}
