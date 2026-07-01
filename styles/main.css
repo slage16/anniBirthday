@@ -126,17 +126,32 @@ main {
   font-size: clamp(1.3rem, 2.5vw, 1.8rem);
 }
 
-.photo img {
-  border-radius: 14px;
-  box-shadow: var(--shadow);
+/* ===== GRID-GALERIE ===== */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.6rem;
 }
 
+.photo-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  opacity: 1;
+  transition: opacity 420ms ease;
+  will-change: opacity;
+}
+
+/* ===== Counter ===== */
 .counter {
   margin: 0.2rem 0 0;
   font-weight: 600;
   color: var(--primary-strong);
 }
 
+/* ===== Buttons ===== */
 .btn {
   border: 0;
   border-radius: 999px;
@@ -162,12 +177,14 @@ main {
   background: #7c5b6b;
 }
 
+/* ===== Footer ===== */
 .footer {
   text-align: center;
   color: var(--muted);
   padding: 1rem 1rem 2rem;
 }
 
+/* ===== Dialog ===== */
 dialog {
   width: min(92vw, 520px);
   border: none;
@@ -187,30 +204,18 @@ dialog::backdrop {
   padding: 1.2rem;
 }
 
+@media (max-width: 700px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 540px) {
   .hero {
     min-height: 56svh;
   }
-}
-.photo img {
-  border-radius: 14px;
-  box-shadow: var(--shadow);
-  opacity: 1;
-  will-change: opacity;
-}
-.photo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.6rem;
-}
 
-.photo-grid img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  opacity: 1;
-  transition: opacity 420ms ease;
-  will-change: opacity;
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
 }
