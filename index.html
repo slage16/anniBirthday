@@ -1,71 +1,99 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="de">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Dein 2. Muttertag</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css" />
-    <script src="scripts/vendor/moment.js"></script>
-    <script src="scripts/vendor/moment-precise-range.js"></script>
-    <script src="scripts/main.js" defer></script>
-    <!-- <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700i&amp;subset=latin-ext" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700i" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="57x57" href="images/fc341dd2fbb6f88d35c18debc6be374c/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="images/fc341dd2fbb6f88d35c18debc6be374c/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/fc341dd2fbb6f88d35c18debc6be374c/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="images/fc341dd2fbb6f88d35c18debc6be374c/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/fc341dd2fbb6f88d35c18debc6be374c/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="images/fc341dd2fbb6f88d35c18debc6be374c/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/fc341dd2fbb6f88d35c18debc6be374c/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/fc341dd2fbb6f88d35c18debc6be374c/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/fc341dd2fbb6f88d35c18debc6be374c/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="images/fc341dd2fbb6f88d35c18debc6be374c/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/fc341dd2fbb6f88d35c18debc6be374c/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="images/fc341dd2fbb6f88d35c18debc6be374c/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/fc341dd2fbb6f88d35c18debc6be374c/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="images/fc341dd2fbb6f88d35c18debc6be374c/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alles Gute zum 2. Muttertag ❤️</title>
+  <meta name="description" content="Eine liebevolle Überraschungsseite zum Muttertag – von Jannis und Papa.">
+  <meta name="theme-color" content="#fff6f8">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alles Gute zum 2. Muttertag ❤️">
+  <meta property="og:description" content="Eine liebevolle Überraschungsseite zum Muttertag – von Jannis und Papa.">
+  <meta property="og:image" content="images/IMG_0653.jpg">
+
+  <!-- Fonts (performant eingebunden) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/fc341dd2fbb6f88d35c18debc6be374c/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/fc341dd2fbb6f88d35c18debc6be374c/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/fc341dd2fbb6f88d35c18debc6be374c/favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/main.css">
 </head>
-
 <body>
-    <header>
-        <div class='headerContainer'>
-            <p class="greatings">Jannis und ich liebe dich, du bist <br>unser <strong>Engel</strong></p>
-            <p class='headerImg'><img src="images/gift-01.png" id="present"></p>
+  <a class="skip-link" href="#content">Zum Inhalt springen</a>
 
+  <header class="hero" role="banner">
+    <div class="hero__inner">
+      <p class="hero__kicker">Von Jannis &amp; Papa</p>
+      <h1 class="hero__title">Alles Gute zum <span>2. Muttertag</span> 💐</h1>
+      <p class="hero__subtitle">
+        Du bist unser Herz, unsere Ruhe und unser Zuhause.
+      </p>
 
-        </div>
-    </header>
-
-    <div class='giftOverLayer'>
-        <!--<h3>Unser erstes gemeinsames Kind</h3>-->
-        <h3>Alles gute zu deinem 2. Muttertag!</h3>
-        <img src="images/IMG_0653.jpg" alt="Cake" width="100%">
-
- <!--       <ul>
-            <li>2 Tickets für Dean Lewis - The Epilogue World Tour </li>
-            <li> 27.02.2025 20:00 Uhr</li>
-            <li>Mitsubishi Electric Hall Düsseldorf</li> 
-       <!--     <li> -->
-      <!--            Errechneter Geburtstermin am 08.01.2024 -->
-       <!--       </li> -->
-       <!--       <li> -->
-       <!--           Nächster <strong>Ultraschalltermin</strong> am 20.10.2023 um 09:00 -->
-       <!--       </li>-->
-      <!--        <li> -->
-      <!--            Nächster Termin bei der <strong>Hebamme</strong> am 20.10.2023 um 11:30 -->
-      <!--        </li>--> 
- <!--       </ul> --> 
+      <button id="openGiftBtn" class="btn" type="button" aria-controls="giftDialog">
+        Geschenk öffnen 🎁
+      </button>
     </div>
-    <div class='wrapper'>
-    </div>
-    <footer>
-        <p class='counter'></p>
-    </footer>
+  </header>
+
+  <main id="content">
+    <section class="card" aria-labelledby="message-title">
+      <h2 id="message-title">Für unseren Engel</h2>
+      <p>
+        Jannis und ich lieben dich von ganzem Herzen. Danke, dass du jeden Tag so viel Liebe,
+        Kraft und Wärme in unsere Familie bringst.
+      </p>
+    </section>
+
+    <section class="photo card" aria-labelledby="photo-title">
+      <h2 id="photo-title">Unser schönster Moment</h2>
+      <img
+        src="images/IMG_0653.jpg"
+        alt="Ein besonderer Familienmoment zum Muttertag"
+        width="1280"
+        height="853"
+        loading="lazy"
+        decoding="async">
+    </section>
+
+    <section class="card counter-card" aria-labelledby="counter-title">
+      <h2 id="counter-title">Unsere gemeinsame Zeit</h2>
+      <p id="counter" class="counter" aria-live="polite">
+        Wird geladen …
+      </p>
+    </section>
+  </main>
+
+  <!-- Modernes Dialog-Overlay statt div-Overlay -->
+  <dialog id="giftDialog" aria-labelledby="giftDialogTitle">
+    <article class="dialog-content">
+      <h2 id="giftDialogTitle">Eine kleine Überraschung 💝</h2>
+      <p>Danke, dass es dich gibt. Wir lieben dich unendlich.</p>
+      <form method="dialog">
+        <button class="btn btn--secondary" type="submit">Schließen</button>
+      </form>
+    </article>
+  </dialog>
+
+  <footer class="footer">
+    <small>Mit Liebe gemacht • <span id="year"></span></small>
+  </footer>
+
+  <noscript>
+    <p style="padding:1rem;text-align:center;">
+      Diese Seite funktioniert besser mit aktiviertem JavaScript.
+    </p>
+  </noscript>
+
+  <script src="scripts/main.js" defer></script>
 </body>
-
 </html>
