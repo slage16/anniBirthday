@@ -5,7 +5,6 @@
 
   // Bilder für 3x3-Slideshow (deine Liste)
   const IMAGE_FILES = [
-    "IMG_0653.jpg",
     "MAMA (1).JPG",
     "MAMA (10).jpg",
     "MAMA (11).jpg",
